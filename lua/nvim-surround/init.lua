@@ -21,8 +21,7 @@ M.insert_surround = function(args)
         -- Save the current mode
         M.mode = vim.fn.mode()
         vim.go.operatorfunc = "v:lua.require'nvim-surround'.insert_callback"
-        vim.api.nvim_feedkeys("g@", "n", false)
-        return
+        return "g@"
     end
 
     -- Define some local variables based on the arguments
